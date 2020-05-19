@@ -8,8 +8,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./blog-item-details.component.scss'],
 })
 export class BlogItemDetailsComponent implements OnInit {
-  public image = '';
-  public text: string;
+  public url = '';
+  public content: string;
   public id: number;
 
   constructor(
@@ -24,8 +24,8 @@ export class BlogItemDetailsComponent implements OnInit {
     });
 
     this.dataService.getById(id).subscribe((res) => {
-      this.image = res['image'];
-      this.text = res['text'];
+      this.url = res['url'];
+      this.content = res['content'];
     });
   }
 }

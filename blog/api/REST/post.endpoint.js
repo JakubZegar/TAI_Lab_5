@@ -31,5 +31,14 @@ const postEndpoint = (router) => {
       applicationException.errorHandler(error, response);
     }
   });
+
+  router.post('/api/posts/search', async (request, response, next) => {
+    try {
+      let result = await business(request).getPostManager().search(request.body);
+      console.log(result);
+    } catch (error) {
+      applicationException.errorHandler(error, response);
+    }
+  });
 };
 export default postEndpoint;

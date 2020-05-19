@@ -24,6 +24,14 @@ function create(context) {
         }
     }
 
+    async function search(content){
+        return PostModel.find(content).then(function(result){
+            if (result) {
+                return mongoConverter(result);
+            }
+        });
+    }
+
     return {
         query: query,
         get: get,
