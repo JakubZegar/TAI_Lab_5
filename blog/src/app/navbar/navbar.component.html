@@ -1,14 +1,25 @@
-<ul class="nav justify-content-center">
+<nav>
+  <ul class="nav justify-content-center">
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/']">HOME</a>
+      <a class="nav-link" [routerLink]="['']">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/blog']">BLOG</a>
+      <a class="nav-link" [routerLink]="['/blog']">Blog</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/contact']">KONTAKT</a>
+      <a class="nav-link" [routerLink]="['/contact']">Contact</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/add-post']">DODAJ POST</a>
+      <a class="nav-link" [routerLink]="['/add-post']">Add Post</a>
+    </li>
+    <li class = "nav-item">
+      <a class= "nav-link active" [routerLink]="['/login']">Login</a>
+    </li>
+    <li class = "nav-item">
+      <a class= "nav-link active" [routerLink]="['/signup']">Sign Up</a>
+    </li>
+    <li class = "nav-item">
+      <button (click)="logOut()" class="btn btn-primary"> Logout </button>
     </li>
   </ul>
+</nav>
